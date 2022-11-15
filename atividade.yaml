@@ -1,0 +1,30 @@
+version: '3.6'
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=12345
+      - MYSQL_DATABASE=atividade_cloud_achitecture
+    restart: always
+    networks:
+            - my-network
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./logs/nginx:/var/log/nginx
+    restart: always
+    networks:
+            - my-network
+networks:
+    my-network:
+        driver: bridge
