@@ -1,2 +1,0 @@
-# atividade-infra
-rg-atividade
