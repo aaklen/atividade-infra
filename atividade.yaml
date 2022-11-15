@@ -10,7 +10,6 @@ services:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_USER=root
       - MYSQL_PASSWORD=12345
-      - MYSQL_DATABASE=atividade_cloud_achitecture
     restart: always
     networks:
             - my-network
