@@ -6,7 +6,6 @@ metadata:
     kubernets.io/ingress.class: addon-http-aplication-routing
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: nginx-example
   rules:
   - http:
       paths:
