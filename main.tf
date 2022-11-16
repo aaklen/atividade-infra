@@ -9,6 +9,8 @@ terraform {
 }
 
 provider "azurerm" {
+  subscription_id = "ded428d7-241d-4830-9051-6edf075ecbd1"
+  tenant_id       = "dc229684-729d-4937-b991-bb1730a25e01"
   features {}
 }
 resource "azurerm_resource_group" "rg-atividade" {
